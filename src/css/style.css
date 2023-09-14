@@ -28,10 +28,28 @@
 }
 
 @layer components {
+    .logo {
+        @apply text-2xl sm:text-4xl md:text-5xl font-bold	
+    }
+    .logo-sm {
+        @apply text-xl
+    } 
     .placeholder-wrapper {
-        @apply flex flex-row
+        @apply flex flex-row justify-center
     }
     .letter {
         @apply mx-2 text-3xl font-medium
+    }
+    .button-primary {
+        @apply flex justify-center items-center bg-slate-200 dark:bg-indigo-500 dark:hover:bg-indigo-600 hover:bg-slate-300 rounded-md font-medium px-5 py-2
+    }
+    .keyboard {
+        @apply max-w-2xl mt-5 flex justify-center flex-wrap
+    }
+    .keyboard-button {
+        @apply w-10 h-10 sm:w-14 sm:h-14 m-1 sm:m-2
+    }
+    .hangman-img {
+        @apply h-32 w-32 sm:h-60 sm:w-60
     }
 }
