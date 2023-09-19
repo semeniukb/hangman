@@ -31,6 +31,9 @@
     .logo {
         @apply text-2xl sm:text-4xl md:text-5xl font-bold	
     }
+    .sublogo {
+        @apply text-xl font-normal	
+    }
     .logo-sm {
         @apply text-xl
     } 
@@ -41,7 +44,11 @@
         @apply mx-2 text-3xl font-medium
     }
     .button-primary {
-        @apply flex justify-center items-center bg-slate-200 dark:bg-indigo-500 dark:hover:bg-indigo-600 hover:bg-slate-300 rounded-md font-medium px-5 py-2
+        @apply flex justify-center items-center bg-slate-200 dark:bg-indigo-500 enabled:dark:hover:bg-indigo-600 enabled:hover:bg-slate-300 
+        rounded-md font-medium px-5 py-2 disabled:opacity-20 disabled:cursor-not-allowed
+    }
+    .button-secondary {
+        @apply border border-black rounded-md hover:bg-slate-100 dark:border-white dark:hover:bg-zinc-600
     }
     .keyboard {
         @apply max-w-2xl mt-5 flex justify-center flex-wrap
@@ -52,4 +59,17 @@
     .hangman-img {
         @apply h-32 w-32 sm:h-60 sm:w-60
     }
+    .result-header {
+        @apply text-2xl font-bold mt-4
+    }
+    .result-header.win {
+        @apply text-lime-600
+    }
+    .result-header.lose {
+        @apply text-red-600
+    }
+    .result-word {
+        @apply font-medium uppercase
+    }
+    
 }
